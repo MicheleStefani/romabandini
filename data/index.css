@@ -1,0 +1,241 @@
+  a {
+      text-decoration: none;
+      color: #9a1413;
+    }
+  
+  a:hover{
+    text-decoration: none;
+    color:#C77575;
+  }
+  
+  h1,h2,h3{
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  h1{
+    font-size: 32px;
+    color: #9a1413;
+  }
+  
+  h2{
+    font-size: 24px;
+    line-height: 27px;
+  }
+  
+  h3{
+    font-weight: 300;
+    font-size: 21px;
+  }
+  
+  h4{
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  
+  p{
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+    color:#555;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 40px;
+  }
+
+  ul {
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F0F2F4;
+    z-index: 2000;
+  }
+  
+ li {
+    font-size: 14px;
+    float: left;
+    padding-left: 35px;
+  }
+  
+  li .dropbtn {
+    display: inline-block;
+    color: #9a1413;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: #b6b5b5;
+  }
+  
+  li.dropdown {
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Calendar */
+  
+  
+  #cal { 
+      display:table;
+  }
+  
+  #cal table { 
+      background:#fff; 
+      border-collapse:collapse;
+      z-index: 2000;  
+  } 
+  #cal td { 
+      color:#2b2b2b; 
+      width:30px; 
+      height:30px; 
+      line-height:30px; 
+      text-align:center; 
+      border:1px solid #e6e6e6; 
+      cursor:default; 
+      z-index: 2000; 
+  } 
+  #cal td.nil {
+      background-color: #DCDCDC;
+      z-index: 2000; 
+  }
+  
+  #cal #days td:not(:last-child) { 
+      border-right:1px solid #fff;
+      z-index: 2000;  
+  }
+  
+  #cal #cal-frame td:not(.nil):hover { 
+      color:#fff; 
+      text-shadow: #6C1A07 0px -1px; 
+      background:#b6b5b5; 
+      /* background: -moz-linear-gradient(top, #b32b0c, #cd310d); 
+      background: -webkit-gradient(linear, left top, left bottom, from(#b32b0c), to(#cd310d));  */
+      box-shadow: 0px 0px 0px;
+      -moz-box-shadow:0px 0px 0px; 
+      -webkit-box-shadow:0px 0px 0px;
+      z-index: 2000;  
+  }
+  
+  #cal #cal-frame td span { 
+      font-size:80%; 
+      position:relative; 
+  } 
+  #cal #cal-frame td span:first-child { 
+      bottom:5px; 
+  } 
+  #cal #cal-frame td span:last-child { 
+      top:5px; 
+  }
+  
+  #cal #cal-frame table.curr { 
+      float:left;      
+  } 
+  #cal #cal-frame table.temp { 
+      position:absolute; 
+  }
+  
+  #days #cal-frame {
+    opacity: 0;
+  }
+  
+  #days #cal-frame:hover {
+    opacity: 1;
+  }
+  
+  
+  /* Style for divs position  */
+  
+    body { margin:0; padding:0; }
+    .div0 {
+    overflow: auto;
+    display: inline-block; /* the default for span */
+    width: 100%;
+    height: 700px;
+    
+  }
+  
+    #map {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+  
+    
+/* flexbox */
+
+html, body {
+  height:100%;
+  min-height:100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.StickyHeader {
+  flex: 0 0 auto;
+  background: #F0F2F4;
+}
+
+.StickyFooter {
+  flex: 0 0 auto;
+  background: #F0F2F4;
+  height: 60px;
+}
+
+.StickyContent {
+  flex: 1 1 auto;
+  overflow-y: scroll;
+  margin-left: 3em;
+  margin-right: 3em;
+  padding-left: 3em;
+  padding-right: 3em; 
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+.noSticky {
+  background: #F0F2F4;
+}
+
+.noStickyF {
+  background: #F0F2F4;
+  height: 50px;
+}
+
+#opacity-slider {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+#opacity-range {
+  width: 100%;
+}
+
+nav{
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Viaggio di Bandini</title>
+
+    <!-- Metadata section -->
+
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+    <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+    <meta name="DC.title" lang="it" content="Angelo Maria Bandini in viaggio a Roma (1780-1781) : una mappa" />
+    <meta name="DC.creator" content="Sabba, Fiammetta" />
+    <meta name="DC.creator" content="Sardo, Lucia" />
+    <meta name="DC.creator" content="Stefani, Michele" />
+    <meta name="DCTERMS.issued" scheme="DCTERMS.W3CDTF" content="2020-04-" /> <!-- data da completare -->
+    <meta name="DC.identifier" scheme="DCTERMS.URI" content="" />
+    <meta name="DCTERMS.abstract" content="" />
+    <meta name="DC.format" scheme="DCTERMS.IMT" content="text/html" />
+    <meta name="DC.type" scheme="DCTERMS.DCMIType" content="Text" />
+
+    <!-- Include Leaflet JS e CSS -->
+    <link rel="stylesheet" href="data/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="data/leaflet-beautify-marker-icon.css">
+    
+    <!-- <link rel="stylesheet" href="data/style.css"> -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="data/leaflet-beautify-marker-icon.js"></script>
+</head>
+<body>
+    <div class="StickyHeader"><h1 style="text-align: center">La Roma monumentale visitata da Angelo Maria Bandini (1780-1781): tour virtuale</h1 >
+        <h3 style="text-align: center"> <em>a cura di Michele Stefani, Fiammetta Sabba e Lucia Sardo</em></h3>
+        <nav>
+                  <ul>
+                    <li class="nav"><a href="index.html">Presentazione</a></li>
+                    <li class="nav"><a href="mappa.html">Esplora la mappa</a></li>
+                    <li class="nav"><a href="cur.html">I curatori</a></li>
+                  </ul>
+                </nav>
+          
+              </div>
+    
+    <div style="z-index: 2000;">
+    
+    <!-- La tua tabella del calendario -->
+    <ul id="calendar">
+        <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Ottobre/Novembre 1780</a>
+            <div class="dropdown-content">	
+                <div id="cal">
+                    <table id="days"><td>lun</td><td>mar</td><td>mer</td><td>gio</td><td>ven</td><td>sab</td><td>dom</td></table>
+                        <div id="cal-frame">
+                            <table class="curr">
+                                <tbody><tr><td><a href='#' id='filter_1780-10-30'>30</a></td><td class="nil">31</td><td><a href='#' id='filter_1780-11-01'>1</a></td><td><a href='#' id='filter_1780-11-02'>2</a></td><td><a href='#' id='filter_1780-11-03'>3</a></td><td><a href='#' id='filter_1780-11-04'>4</a></td><td><a href='#' id='filter_1780-11-05'>5</a></td></tr><tr><td><a href='#' id='filter_1780-11-06'>6</a></td><td><a href='#' id='filter_1780-11-07'>7</a></td><td><a href='#' id='filter_1780-11-08'>8</a></td><td><a href='#' id='filter_1780-11-09'>9</a></td><td><a href='#' id='filter_1780-11-10'>10</a></td><td class="nil"><a href='#' id='filter_1780-11-11'>11</a></td><td><a href='#' id='filter_1780-11-12'>12</a></td></tr><tr><td><a href='#' id='filter_1780-11-13'>13</a></td><td><a href='#' id='filter_1780-11-14'>14</a></td><td><a href='#' id='filter_1780-11-15'>15</a></td><td><a href='#' id='filter_1780-11-16'>16</a></td><td><a href='#' id='filter_1780-11-17'>17</a></td><td><a href='#' id='filter_1780-11-18'>18</a></td><td><a href='#' id='filter_1780-11-19'>19</a></td></tr><tr><td><a href='#' id='filter_1780-11-20'>20</a></td><td><a href='#' id='filter_1780-11-21'>21</a></td><td><a href='#' id='filter_1780-11-22'>22</a></td><td><a href='#' id='filter_1780-11-23'>23</a></td><td><a href='#' id='filter_1780-11-24'>24</a></td><td class="nil"><a href='#' id='filter_1780-11-25'>25</a></td><td><a href='#' id='filter_1780-11-26'>26</a></td></tr><tr><td><a href='#' id='filter_1780-11-27'>27</a></td><td><a href='#' id='filter_1780-11-28'>28</a></td><td class="nil"><a href='#' id='filter_1780-11-29'>29</a></td><td><a href='#' id='filter_1780-11-30'>30</a></td><td class="nil"></td><td class="nil"></td><td class="nil"></td></tr></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+        <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Dicembre 1780</a>
+            <div class="dropdown-content">	
+                <div id="cal">
+                    <table id="days"><td>lun</td><td>mar</td><td>mer</td><td>gio</td><td>ven</td><td>sab</td><td>dom</td></table>
+                        <div id="cal-frame">
+                            <table class="curr">
+                                <tbody><tr><td class="nil"></td><td class="nil"></td><td class="nil"></td><td class="nil"></td><td><a href='#' id='filter_1780-12-01'>1</a></td><td><a href='#' id='filter_1780-12-02'>2</a></td><td><a href='#' id='filter_1780-12-03'>3</a></td></tr><tr><td><a href='#' id='filter_1780-12-04'>4</a></td><td><a href='#' id='filter_1780-12-05'>5</a></td><td><a href='#' id='filter_1780-12-06'>6</a></td><td><a href='#' id='filter_1780-12-07'>7</a></td><td><a href='#' id='filter_1780-12-08'>8</a></td><td><a href='#' id='filter_1780-12-09'>9</a></td><td><a href='#' id='filter_1780-12-10'>10</a></td></tr><tr><td><a href='#' id='filter_1780-11-12'>11</a></td><td><a href='#' id='filter_1780-12-12'>12</a></td><td><a href='#' id='filter_1780-12-13'>13</a></td><td class="nil"><a href='#' id='filter_1780-12-14'>14</a></td><td><a href='#' id='filter_1780-12-15'>15</a></td><td><a href='#' id='filter_1780-12-16'>16</a></td><td><a href='#' id='filter_1780-12-17'>17</a></td></tr><tr><td><a href='#' id='filter_1780-12-18'>18</a></td><td><a href='#' id='filter_1780-12-19'>19</a></td><td><a href='#' id='filter_1780-12-20'>20</a></td><td><a href='#' id='filter_1780-12-21'>21</a></td><td><a href='#' id='filter_1780-12-22'>22</a></td><td><a href='#' id='filter_1780-12-23'>23</a></td><td><a href='#' id='filter_1780-12-24'>24</a></td></tr><tr><td class="nil"><a href='#' id='filter_1780-12-25'>25</a></td><td><a href='#' id='filter_1780-12-26'>26</a></td><td><a href='#' id='filter_1780-12-27'>27</a></td><td><a href='#' id='filter_1780-12-28'>28</a></td><td><a href='#' id='filter_1780-12-29'>29</a></td><td><a href='#' id='filter_1780-12-30'>30</a></td><td><a href='#' id='filter_1780-12-31'>31</a></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+        <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Gennaio 1781</a>
+            <div class="dropdown-content">
+                <div id="cal">
+                    <table id="days"><td>lun</td><td>mar</td><td>mer</td><td>gio</td><td>ven</td><td>sab</td><td>dom</td></table>
+                        <div id="cal-frame">
+                            <table class="curr"><tbody><tr><td><a href='#' id='filter_1781-01-01'>1</a></td><td><a href='#' id='filter_1781-01-02'>2</a></td><td><a href='#' id='filter_1781-01-03'>3</a></td><td><a href='#' id='filter_1781-01-04'>4</a></td><td><a href='#' id='filter_1781-01-05'>5</a></td><td><a href='#' id='filter_1781-01-06'>6</a></td><td><a href='#' id='filter_1781-01-07'>7</a></td></tr><tr><td><a href='#' id='filter_1781-01-08'>8</a></td><td><a href='#' id='filter_1781-01-09'>9</a></td><td><a href='#' id='filter_1781-01-10'>10</a></td><td><a href='#' id='filter_1781-01-11'>11</a></td><td><a href='#' id='filter_1781-01-12'>12</a></td><td><a href='#' id='filter_1781-01-13'>13</a></td><td><a href='#' id='filter_1781-01-14'>14</a></td></tr><tr><td class="nil">15</td><td class="nil">16</td><td class="nil">17</td><td class="nil">18</td><td class="nil">19</td><td class="nil">20</td><td class="nil">21</td></tr><tr><td class="nil">22</td><td class="nil">23</td><td class="nil">24</td><td class="nil">25</td><td class="nil">26</td><td class="nil">27</td><td class="nil">28</td></tr><tr><td class="nil">29</td><td class="nil">30</td><td class="nil">31</td><td class="nil"></a></td><td class="nil"></td><td class="nil"></td><td class="nil"></td></tr></tbody></table></div></div></li><li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Aprile/Maggio 1781</a><div class="dropdown-content">	<div id="cal">
+                    <table id="days"><td>lun</td><td>mar</td><td>mer</td><td>gio</td><td>ven</td><td>sab</td><td>dom</td></table><div id="cal-frame">
+                    <table class="curr"><tbody><tr><td class="nil">2</td><td class="nil">3</td><td class="nil">4</td><td class="nil">5</td><td class="nil">6</td><td><a href='#' id='filter_1781-04-07'>7</a></td><td><a href='#' id='filter_1781-04-08'>8</a></td></tr><tr><td><a href='#' id='filter_1781-04-09'>9</a></td><td><a href='#' id='filter_1781-04-10'>10</a></td><td><a href='#' id='filter_1781-04-11'>11</a></td><td><a href='#' id='filter_1781-04-12'>12</a></td><td><a href='#' id='filter_1781-04-13'>13</a></td><td><a href='#' id='filter_1781-04-14'>14</a></td><td><a href='#' id='filter_1781-04-15'>15</a></td></tr><tr><td><a href='#' id='filter_1781-04-16'>16</a></td><td><a href='#' id='filter_1781-04-17'>17</a></td><td><a href='#' id='filter_1781-04-18'>18</a></td><td><a href='#' id='filter_1781-04-19'>19</a></td><td><a href='#' id='filter_1781-04-20'>20</a></td><td><a href='#' id='filter_1781-04-21'>21</a></td><td><a href='#' id='filter_1781-04-22'>22</a></td></tr><tr><td><a href='#' id='filter_1781-04-23'>23</a></td><td><a href='#' id='filter_1781-04-24'>24</a></td><td><a href='#' id='filter_1781-04-25'>25</a></td><td><a href='#' id='filter_1781-04-26'>26</a></td><td><a href='#' id='filter_1781-04-27'>27</a></td><td><a href='#' id='filter_1781-04-28'>28</a></td><td><a href='#' id='filter_1781-04-29'>29</a></td></tr><tr><td><a href='#' id='filter_1781-04-30'>30</a></td><td><a href='#' id='filter_1781-05-01'>1</a></td><td><a href='#' id='filter_1781-05-02'>2</a></td><td><a href='#' id='filter_1781-05-03'>3</a></td><td class="nil"></td><td class="nil"></td><td class="nil"></td></tr></tbody></table></div></div></li><li class="dropdown" id="label"><a href="javascript:void(0)" class="dropbtn"><span class='active' id='filter_all'><img id="resetFilter" src="data/reset.png" width = 25px></span></a></li></ul>
+
+    <!-- Pulsante di reset -->
+    <!-- <button id="resetFilter">Reset</button> -->
+
+    <!-- Mappa -->
+    <!-- <div id="map" style="height: 500px;"></div> -->
+
+</div>
+<div class="div0">
+<span id='map'>
+  <div id="opacity-slider">
+    <input type="range" min="0" max="1" step="0.1" value="1" id="opacity-range" orient="vertical">
+  </div>
+</span>
+
+
+</div>
+
+    <script src="data/script.js"></script>
+</body>
+</html>
